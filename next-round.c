@@ -2,26 +2,25 @@
 
 int main()
 {
-    int a[100];
-    int n;
-    int j, p = 0;
+    int n, k, count = 0;
+    scanf("%d %d", &n, &k);
 
-    scanf("%d%d", &n, &j);
+    int num_arr[n];
 
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &a[i]);
+        scanf("%d", &num_arr[i]);
     }
 
     for (int i = 0; i < n; i++)
     {
-        if (a[i] >= a[j - 1] && a[i] > 0)
+        if ((num_arr[i] >= num_arr[k - 1]) && (num_arr[i] > 0))
         {
-            p++;
+            count++;
         }
     }
 
-    printf("%d\n", p);
+    printf("%d", count);
 
     return 0;
 }
